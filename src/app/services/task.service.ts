@@ -8,27 +8,27 @@ export class TaskService {
   private tasks: Task[] = [
     {
       id: 1,
-      title: 'Finish Project',
-      description: 'Complete Angular midterm',
-      dueDate: '2026-03-25',
+      title: 'Maglaba',
+      description: 'Maglaba ng mga damit',
+      dueDate: '2026-03-28',
       status: 'Pending',
-      priority: 'High',
-    },
-    {
-      id: 2,
-      title: 'Study Routing',
-      description: 'Understand child routes',
-      dueDate: '2026-03-26',
-      status: 'In Progress',
       priority: 'Medium',
     },
     {
-      id: 3,
-      title: 'Clean Room',
-      description: 'Organize workspace',
-      dueDate: '2026-03-27',
-      status: 'Completed',
+      id: 2,
+      title: 'Magigib',
+      description: 'Magigib ng tubig na maiinom',
+      dueDate: '2026-03-26',
+      status: 'Pending',
       priority: 'Low',
+    },
+    {
+      id: 3,
+      title: 'Maglinis sa bahay',
+      description: 'May darating na bisita',
+      dueDate: '2026-03-29',
+      status: 'Completed',
+      priority: 'High',
     },
   ];
 

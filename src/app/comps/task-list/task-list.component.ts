@@ -20,13 +20,6 @@ export class TaskListComponent implements OnInit {
     this.tasks = this.taskService.getTasks();
   }
 
-  deleteTask(id: number) {
-    if (confirm('Delete this task?')) {
-      this.taskService.deleteTask(id);
-      this.tasks = this.taskService.getTasks();
-    }
-  }
-
   toggleStatus(id: number) {
     this.taskService.toggleStatus(id);
     this.tasks = this.taskService.getTasks();

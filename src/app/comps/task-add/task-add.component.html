@@ -1,32 +1,37 @@
-<div class="container mt-3">
-  <h2>Add Task</h2>
-  <div class="mb-3">
-    <label class="form-label">Title</label>
-    <input [(ngModel)]="task.title" name="title" class="form-control" />
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Description</label>
-    <textarea [(ngModel)]="task.description" name="description" class="form-control" rows="3"></textarea>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Due date</label>
-    <input type="date" [(ngModel)]="task.dueDate" name="dueDate" class="form-control" />
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Status</label>
-    <select [(ngModel)]="task.status" name="status" class="form-select">
-      <option value="Pending">Pending</option>
-      <option value="In Progress">In Progress</option>
-      <option value="Completed">Completed</option>
-    </select>
-  </div>
-  <div class="mb-3">
-    <label class="form-label">Priority</label>
-    <select [(ngModel)]="task.priority" name="priority" class="form-select">
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-    </select>
-  </div>
-  <button type="button" class="btn btn-primary" (click)="addTask()">Add Task</button>
+<div class="container mt-4">
+    <div class="card border shadow-sm">
+      <div class="card-body">
+        <h2>Add Task</h2>
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input [(ngModel)]="task.title" name="title" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea [(ngModel)]="task.description" name="description" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Due date</label>
+                <input type="date" [(ngModel)]="task.dueDate" name="dueDate" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Status</label>
+                <select [(ngModel)]="task.status" name="status" class="form-select">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Priority</label>
+                <select [(ngModel)]="task.priority" name="priority" class="form-select">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                </select>
+            </div>
+        <a routerLink="/tasks" class="btn btn-outline-primary me-2">Return to list</a>
+        <button type="button" class="btn btn-success" (click)="addTask()">Add Task</button>
+        </div>
+    </div>
 </div>

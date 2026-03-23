@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Task } from '../../models/task.model';
 import { TaskService } from '../../services/task.service';
@@ -18,6 +18,7 @@ export class TaskEditComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private service: TaskService,
   ) {}
 
@@ -28,5 +29,14 @@ export class TaskEditComponent implements OnInit {
 
   updateTask() {
     this.service.updateTask(this.task);
+    this.goToTaskDetails();
+  }
+
+  cancel() {
+    this.goToTaskDetails();
+  }
+
+  private goToTaskDetails() {
+    this.router.navigate(['../info'], { relativeTo: this.route });
   }
 }
