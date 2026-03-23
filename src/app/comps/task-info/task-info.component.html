@@ -1,1 +1,7 @@
-<p>task-info works!</p>
+<div class="mt-3" *ngIf="task">
+  <h3>{{ task.title }}</h3>
+  <p><strong>Description:</strong> {{ task.description }}</p>
+  <p><strong>Due:</strong> {{ task.dueDate }}</p>
+  <p><strong>Status:</strong> {{ task.status }}</p>
+  <p><strong>Priority:</strong> {{ task.priority }}</p>
+</div>

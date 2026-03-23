@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { XRouterLink } from '@angular/router';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../models/task.model';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, XRouterLink],
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css',
 })
@@ -32,3 +32,4 @@ export class TaskListComponent implements OnInit {
     this.tasks = this.taskService.getTasks();
   }
 }
+

@@ -1,1 +1,29 @@
-<p>task-list works!</p>
+<div class="container mt-3">
+    <h2>Task List</h2>
+  
+    <a routerLink="/tasks/new" class="btn btn-primary mb-2">Add Task</a>
+  
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+  
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.title }}</td>
+        <td>
+          <span class="badge bg-info">{{ task.status }}</span>
+        </td>
+        <td>
+          <span class="badge bg-warning">{{ task.priority }}</span>
+        </td>
+        <td>
+          <button class="btn btn-success btn-sm" (click)="toggleStatus(task.id)">Toggle</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteTask(task.id)">Delete</button>
+          <a [routerLink]="['/tasks', task.id]" class="btn btn-primary btn-sm">View</a>
+        </td>
+      </tr>
+    </table>
+  </div>
